@@ -1,0 +1,269 @@
+* {
+    --primary-color: #2A2C2D;
+    --container-max-width: 1140px;
+}
+
+
+header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 4em;
+}
+
+header > a {
+    color:  var(--primary-color);
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+header > a > img {
+margin-right: .5rem;
+}
+
+header nav a {
+    color:  var(--primary-color);
+    margin: 0 .8rem;
+}
+
+header nav a:hover {
+    color:  var(--primary-color);
+    text-decoration: underline;
+}
+
+.active {
+    opacity: 0.6;
+}
+
+footer {
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 4em;
+}
+
+footer > a {
+    color:  white;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+footer > p {
+    color: white;
+    margin: 0;
+}
+
+.poster{
+    position: relative;
+}
+
+.poster > img {
+    width: 100%;
+}
+
+.box-wrapper {
+    position: absolute;
+    max-width: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto; 
+}
+
+.box-wrapper  > div {
+    padding: 2rem;
+    background-color: white;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-wrapper  > div > p {
+    margin: 15px 0 0 0;
+    font-size: large;
+}
+
+.box-wrapper  > div img {
+    max-width: 200px;
+    min-width: 100px;
+}
+
+h1#main-heading {
+    text-align: center;
+    margin-top: 30px;
+  
+    /* padding-bottom: 20px; */
+}
+
+.block-content img {
+    width: 100%;
+}
+
+.logo-width {
+    width: 40% !important;
+}
+
+h1#main-heading-padding {
+    text-align: center;
+    margin-top: 150px;
+    padding-bottom: 20px;
+}
+
+.sup-header {
+    font-size: large;
+    font-weight: bold;
+    width: min(100% - 15px, 1040px);
+    margin-inline: auto;
+}
+
+.h1 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 10px;
+    width: min(100% - 15px, 1040px);
+    margin-inline: auto;
+}
+
+.main-content img {
+    padding-top: 20px;
+}
+
+.block-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: min(100% - 15px, 1040px);
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.color-reverted {
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.row p:last-child {
+    padding-left: 20px !important;
+}
+
+td {
+    padding: 3px 10px;
+  }
+
+@media (max-width: 527.98px) { 
+    .box-wrapper  > div img {
+        min-width: 40px;
+    }
+
+    .box-wrapper  > div > p {
+        font-size: normal;
+    }
+
+    .box-wrapper  > div {
+        padding: .3rem;
+        background-color: white;
+        margin: 1.5rem .2rem;
+    }
+
+    .box-wrapper{
+        gap: 2px;
+    }
+ }
+
+@media (max-width: 767.98px) { 
+    header {
+        display: flex;
+        flex-direction: column;
+        padding: 0.7rem 1em;
+    }
+
+    footer {
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 0.7rem 4em;
+    }
+
+    header nav a {
+        margin: 0 .2rem;
+    }
+    
+
+    .box-wrapper  > div img {
+        min-width: 60px;
+    }
+
+    .box-wrapper{
+        position: relative;
+        transform: none;
+        left: auto;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto auto;
+    }
+
+    h1#main-heading {
+        margin-top: 30px;
+    }
+    
+    .sup-header {
+        text-align: center;
+    }
+    
+    .main-content{
+        text-align: center;
+    }
+
+    .block-content{
+        grid-template-columns: auto;
+    }
+ }
+
+
+@media (max-width: 1199.98px) { 
+    .box-wrapper  > div img {
+        width: 80%;
+    }
+ }
+
+
+@media print {
+    header, footer, .box-wrapper {
+        display: none;
+    }
+ }
